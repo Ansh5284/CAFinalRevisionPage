@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8f9fa;
+    color: #0f172a;
+  }
+
+  h1,
+  h2,
+  .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+/* Deter printing of protected revision artifacts */
+@media print {
+  .protected-artifact-surface {
+    display: none !important;
+  }
+  body::after {
+    content: "Printing and downloading of Chartered Archive study materials is restricted to view-only online access.";
+    display: block;
+    padding: 3rem;
+    font-size: 1rem;
+    color: #0f172a;
+  }
+}
+
+/* Prevent text/image drag selection inside protected view-only reader */
+.no-select-artifact {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Chartered Archive",
+  "description": "Chapter-wise view-only revision portal for CA Final subjects—Financial Reporting, Advanced Audit, Advanced Financial Management, Indirect Taxes, and Direct Taxes—powered by Google Drive with smart chapter search, private Sheet feedback, and quiz/descriptive assessment support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
